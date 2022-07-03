@@ -1,5 +1,5 @@
 settings:
-  title: 'SpaceCoreMC Status Page'
+  title: 'PlasmaBot Status Page'
   url: 'https://status-page.eidam.dev' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 30 # number of days you want to display in histogram
@@ -16,24 +16,18 @@ settings:
 
 monitors:
   - id: main-website # unique identifier
-    name: spacecoremc.rk
+    name: plasamabot.tk
     description: 'This us our main website' # default=empty
-    url: 'https://spacecoremc.tk/' # URL to fetch
+    url: 'https://plasmabot.tk/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
   - id: proxy-server
-    name: play.spacecoremc.tk
-    description: 'This is the server that connects our servers'
-    url: 'https://play.spacecoremc.tk'
+    name: status.plasmabot.tk
+    description: 'This is the status website!'
+    url: 'https://status.plasmabot.tk'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
-
-  - id: soon
-    name: adding-more-soon
-    url: 'https://example.com/'
-    method: GET
-    expectStatus: 200
